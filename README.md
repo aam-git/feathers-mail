@@ -2,7 +2,7 @@
 
 > Simple Feathers mailer service using [`nodemailer`](https://github.com/nodemailer/nodemailer)
 >
->For security, the Mail service has been set up to only work internally, under service name _mailer
+>For security, the Mail service has been set up to only work internally.  The service is named _mailer
 
 ## Installation
 
@@ -15,25 +15,33 @@ npm install feathers-mail --save
 #### In your config file (eg config/default.json) add
 ```js
   "feathers-mail": {
-    "host": "smtp.host.here",
-    "secure": true,
-    "auth": {
-      "user": "smtp@email.here",
-      "pass": "replacewithpassword"
+    "from": "your@email.here",
+    "smtp": {
+        "host": "smtp.host.here",
+        "secure": true,
+        "auth": {
+          "user": "smtp@user.here",
+          "pass": "replacewithpassword"
+        }
     }
   }
 ```
 More smtp settings available here [`https://nodemailer.com/smtp/`](https://nodemailer.com/smtp/)
 
 
-####Install plugin globally
-#####add in app.js after "app.configure(channels);"
+####Install plugin
 ```js
 // mailer plugin
 app.configure(require('feathers-mail'));
 ```
+This can be done in either
+* app.js after "app.configure(channels);"
+* in any class or service where app. is available.
 
-#### Example to call Mailer from another service
+if you define the service multiple times, it will ignore the duplicates
+
+
+#### Example usage
 
 ```js
     try {

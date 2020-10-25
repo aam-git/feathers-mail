@@ -1,4 +1,4 @@
-const mailer = require('./services/mailer.service.js');
+const mailer = require('./services/mailer.service');
 
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {

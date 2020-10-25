@@ -10,7 +10,7 @@ exports.Mailer = class Mailer {
 
     try {
 
-      let transporter = nodemailer.createTransport(this.app.get('feathers-mail'));
+      let transporter = nodemailer.createTransport(this.app.get('feathers-mail').smtp);
 
       let info = await transporter.sendMail(data);
 
