@@ -6,11 +6,11 @@ exports.Mailer = class Mailer {
   constructor (app) {
     this.app = app;
   }
-  async create (data, params) {
+  async create (data) {
 
     try {
 
-      let transporter = nodemailer.createTransport(this.app.get('smtp'));
+      let transporter = nodemailer.createTransport(this.app.get('feathers-mail'));
 
       let info = await transporter.sendMail(data);
 

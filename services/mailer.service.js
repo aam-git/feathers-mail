@@ -4,7 +4,7 @@ const hooks = require('../hooks/mailer.hooks');
 
 module.exports = function (app) {
 
-  if (typeof this.app.get('smtp') !== 'undefined') {
+  if (typeof app.get('feathers-mail') !== 'undefined') {
 
     // Initialize our service with any options it requires
     app.use('/_mailer', new Mailer(app));
