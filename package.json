@@ -1,7 +1,7 @@
 {
   "name": "feathers-mail",
   "description": "Feathers Mail Service and Hooks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "AAM Services",
   "license": "MIT",
   "repository": {
