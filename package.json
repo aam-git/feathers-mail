@@ -1,0 +1,36 @@
+{
+  "name": "feathers-mail",
+  "description": "Feathers Mail Service and Hooks",
+  "version": "0.1.0",
+  "author": "AAM Services",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aam-git/feathers-mail.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aam-git/feathers-mail/issues"
+  },
+  "homepage": "https://github.com/aam-git/feathers-mail#readme",
+  "main": "src/",
+  "directories": {
+    "src": "src"
+  },
+  "dependencies": {
+    "nodemailer": "^6.4.14",
+    "feathers-hooks-common": "^5.0.4",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "feathers",
+    "feathersjs",
+    "feathers-plugin",
+    "mail",
+    "email",
+    "nodemailer"
+  ]
+}
